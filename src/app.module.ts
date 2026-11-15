@@ -7,6 +7,7 @@ import { StudentsModule } from './students/students.module.js';
 import { Student } from './students/entities/student.entity.js';
 import { TeachersModule } from './teachers/teachers.module.js';
 import { ClassesModule } from './classes/classes.module.js';
+import { AssignmentsModule } from './assignments/assignments.module.js';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { ClassesModule } from './classes/classes.module.js';
     StudentsModule,
     TeachersModule,
     ClassesModule,
+    AssignmentsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
