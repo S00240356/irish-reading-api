@@ -1,15 +1,23 @@
 import { Injectable } from '@nestjs/common';
 import { CreateSentenceDto } from './dto/create-sentence.dto.js';
 import { UpdateSentenceDto } from './dto/update-sentence.dto.js';
+import { Repository } from 'typeorm';
+import { Sentence } from './entities/sentence.entity.js';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class SentencesService {
+  constructor(
+    @InjectRepository(Sentence)
+    private readonly sentencesRepository: Repository<Sentence>
+  ) {}
+
   create(createSentenceDto: CreateSentenceDto) {
     return 'This action adds a new sentence';
   }
 
   findAll() {
-    return `This action returns all sentences`;
+    return this.sentencesRepository.find();;
   }
 
   findOne(id: number) {
