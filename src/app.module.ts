@@ -8,6 +8,7 @@ import { Student } from './students/entities/student.entity.js';
 import { TeachersModule } from './teachers/teachers.module.js';
 import { ClassesModule } from './classes/classes.module.js';
 import { AssignmentsModule } from './assignments/assignments.module.js';
+import { SentencesModule } from './sentences/sentences.module.js';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { AssignmentsModule } from './assignments/assignments.module.js';
     TeachersModule,
     ClassesModule,
     AssignmentsModule,
+    SentencesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
