@@ -13,7 +13,8 @@ export class SentencesService {
   ) {}
 
   create(createSentenceDto: CreateSentenceDto) {
-    return 'This action adds a new sentence';
+    const sentence = this.sentencesRepository.create(createSentenceDto);
+    return this.sentencesRepository.save(sentence);
   }
 
   findAll() {

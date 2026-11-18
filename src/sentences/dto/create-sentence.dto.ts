@@ -1,1 +1,3 @@
-export class CreateSentenceDto {}
+export class CreateSentenceDto {
+    text: string;
+}
