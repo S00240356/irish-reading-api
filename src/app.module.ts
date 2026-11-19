@@ -9,6 +9,7 @@ import { TeachersModule } from './teachers/teachers.module.js';
 import { ClassesModule } from './classes/classes.module.js';
 import { AssignmentsModule } from './assignments/assignments.module.js';
 import { SentencesModule } from './sentences/sentences.module.js';
+import { AbairModule } from './abair/abair.module.js';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { SentencesModule } from './sentences/sentences.module.js';
     ClassesModule,
     AssignmentsModule,
     SentencesModule,
+    AbairModule,
   ],
   controllers: [AppController],
   providers: [AppService],
